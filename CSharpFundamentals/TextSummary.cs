@@ -9,12 +9,13 @@ namespace CSharpFundamentals
         {
             Console.WriteLine("Let's summarize some textseses...");
             string blog = "This is going to be a really really really really really long text...";
+            PrintBlogSummary(blog);
+            PrintBlogSummary(blog, 40);
+        }
 
-            string shortSummary = BlogUtility.SummarizeBlog(blog);
-            Console.WriteLine(shortSummary);
-
-            string longSummary = BlogUtility.SummarizeBlog(blog, 40);
-            Console.WriteLine(longSummary);
+        public static void PrintBlogSummary(string blog, int len=20)
+        {
+            Console.WriteLine(BlogUtility.SummarizeBlog(blog, len));
         }
 
     }
